@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+# 🌱 Seed Core
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Seed Core** is a modern, open-source business platform for handling invoicing, procurement, and accounting. Built with **Laravel** on the backend and **React + Vite** on the frontend, it is designed for small to mid-sized businesses that need a robust yet flexible solution for managing financial workflows.
 
-## Available Scripts
+Seed Core helps you stay on top of **receivables, payables, inventory**, and **compliance-ready reports** — all via an API-first architecture you can self-host or extend.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🧾 Invoicing & Receivables
+- Create professional invoices with branded templates.
+- Track receivables and customer balances.
+- Generate **Aging of Receivables** reports.
+- Convert quotes or estimates into invoices.
+- Support for recurring invoices and partial payments.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📦 Purchasing & Payables
+- Manage the **purchase lifecycle**: estimates → purchase orders → payables.
+- Track vendors, deliveries, and payment schedules.
+- View **Aging of Payables** and open purchase reports.
 
-### `npm test`
+### 📚 Double-Entry Accounting
+- Full ledger-based system:
+  - Chart of Accounts
+  - Journal Entries
+  - General Ledger
+- Linked seamlessly to operational transactions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📊 Built-in Financial Reports
+- Income Statement (Profit & Loss)
+- Balance Sheet
+- Trial Balance
+- Cash Flow Statement
+- Journal and General Ledger
+- Aging Reports (Receivables & Payables)
 
-### `npm run build`
+### 👥 Business Essentials
+- Manage clients, vendors, employees, products, and services.
+- Track inventory used in sales or purchases.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔐 Auth & Access Control
+- User login and role-based permission management.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🌐 API-First Backend
+- REST API ready for frontend or third-party system integrations.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🐳 Quick Start (Using Docker)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### ✅ Requirements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  > For **Windows**:
+  - Install the [WSL2 Backend](https://docs.microsoft.com/en-us/windows/wsl/)
+  - Use [Git Bash](https://gitforwindows.org/) to run `run.sh` script
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  > For **macOS**:
+  - Ensure you have **Docker Desktop for Mac** installed
+  - Use the built-in **Terminal** app to run shell scripts like `run.sh`
 
-## Learn More
+- [Git](https://git-scm.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+### ▶️ Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Clone the monorepo:**
 
-### Analyzing the Bundle Size
+```bash
+git clone https://github.com/nexuslifeline/seed-core.git
+cd seed-core
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Run the setup script:**
 
-### Making a Progressive Web App
+```bash
+./run.sh
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This will:
 
-### Advanced Configuration
+- Build and start all containers (Laravel backend, React frontend, MySQL)
+- Install Laravel dependencies with Composer
+- Run database migrations and optional seeders
+- Start the Laravel development server
+- Start the Vite development server for the frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### 🔗 Access the App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Laravel API**: [http://localhost:8000](http://localhost:8000)  
+- **React Frontend**: [http://localhost:5173](http://localhost:5173)  
+- **MySQL Database**: `localhost:3307`  
+  - Username: `root`  
+  - Password: `root`  
+  - Database: `seed_invoice`
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ⚙️ Manual Setup (Without Docker)
+
+### 🛠 Backend (Laravel)
+
+```bash
+cd backend
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+```
+
+> The Laravel server will be available at http://localhost:8000
+
+### 🛠 Frontend (React + Vite)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+> This will start the Vite development server at `http://localhost:5173`
+
+Make sure the frontend `.env` file is configured correctly. Example:
+
+```env
+VITE_API_URL=http://localhost:8000
+```
+
+
+## 📁 Repository Structure
+
+```yaml
+seed-core/
+├── backend/            # Laravel backend API
+│   └── Dockerfile
+├── frontend/           # React + Vite frontend
+│   └── Dockerfile
+├── docker-compose.yml
+└── run.sh              # One-click dev setup
+```
+
+
+
