@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: seed-invoice-backend
+    container_name: seed-invoice-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/var/www
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: seed_invoice
+      DB_USERNAME: root
+      DB_PASSWORD: root
+    networks:
+      - seed-invoice-network
+    command: sh -c "sleep infinity"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: seed-invoice-frontend
+    container_name: seed-invoice-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    working_dir: /app
+    command: ["npm", "run", "dev", "--", "--host"]
+    networks:
+      - seed-invoice-network
+
+  db:
+    image: mysql:8.0
+    container_name: seed-invoice-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: seed_invoice
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - seed-invoice-network
+
+networks:
+  seed-invoice-network:
+    driver: bridge
+
+volumes:
+  db_data:
