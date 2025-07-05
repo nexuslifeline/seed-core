@@ -1,0 +1,26 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.container {
+  width: 100%;
+  color: $white;
+  cursor: pointer;
+}
+
+.subheadline {
+  color: $white;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.subheadline {
+  font-size: $fs-2;
+  line-height: 12px;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+  opacity: 0.9;
+  margin: 0;
+}

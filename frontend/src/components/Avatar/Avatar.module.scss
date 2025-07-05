@@ -1,0 +1,92 @@
+@import 'src/shared/styles/variables.scss';
+
+.container {
+  height: 120px;
+  width: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // overflow: hidden;
+
+  &.online {
+    &::before {
+      position: absolute;
+      top: -1px;
+      right: 0;
+      height: 9px;
+      width: 9px;
+      background-color: $green-100;
+      border: 1px solid $white;
+      content: '';
+      border-radius: 50%;
+    }
+  }
+}
+
+.square {
+  border-radius: 8px;
+}
+
+.round,
+.round > .photo,
+.round > .initials {
+  border-radius: 50%;
+}
+
+.input {
+  display: none;
+}
+
+.browse,
+.remove {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // border: solid 1px black;
+  cursor: pointer;
+  padding: 0;
+  // margin: 0;
+}
+
+.browse {
+  top: calc(50% - 20px);
+  right: -14px;
+}
+
+.remove {
+  top: calc(50% + 10px);
+  right: -14px;
+}
+
+.photo {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  object-fit: cover;
+}
+
+.browseIcon,
+.removeIcon {
+  height: 14px;
+  width: 14px;
+}
+
+.browse *,
+.remove * {
+  fill: white;
+}
+
+.initials {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}

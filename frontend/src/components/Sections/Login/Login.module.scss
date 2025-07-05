@@ -1,0 +1,18 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+
+@import '../Shared.module.scss';
+
+.signupLink {
+  margin: 0 5px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.forgotLink {
+  margin-left: auto;
+}

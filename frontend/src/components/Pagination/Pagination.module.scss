@@ -1,0 +1,51 @@
+@import 'src/shared/styles/variables.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+}
+
+.page,
+.previous,
+.next {
+  margin-right: 8px;
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  font-size: $fs-1;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.previous,
+.next {
+  font-size: $fs-5;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.dots {
+  border: solid 0.5px $gray-30;
+  color: $gray-100;
+}

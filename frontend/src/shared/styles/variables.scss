@@ -1,0 +1,118 @@
+$orange-10: #fff7ed;
+$orange-20: #ffeedb;
+$orange-30: #ffe6c9;
+$orange-40: #ffdeb7;
+$orange-50: #ffd5a5;
+$orange-60: #ffcd94;
+$orange-70: #ffc482;
+$orange-80: #ffbc70;
+$orange-90: #ffb45e;
+$orange-100: #ffa33a;
+
+$gray-10: #eff0f2;
+$gray-20: #e0e1e4;
+$gray-30: #d0d3d7;
+$gray-40: #c1c4ca;
+$gray-50: #b2b6be;
+$gray-60: #a3a8b1;
+$gray-70: #959aa5;
+$gray-80: #878d98;
+$gray-90: #797f8c;
+$gray-100: #6b7280;
+
+$purple-10: #f3e5fe;
+$purple-20: #e8cbfd;
+$purple-30: #dcb2fc;
+$purple-40: #d098fb;
+$purple-50: #c47efa;
+$purple-60: #b964f9;
+$purple-70: #ad4af8;
+$purple-80: #a130f7;
+$purple-90: #9517f6;
+$purple-100: #8809e9;
+
+$red-10: #fef0f0;
+$red-20: #fde0e0;
+$red-30: #fcd1d1;
+$red-40: #fbc1c1;
+$red-50: #fab2b2;
+$red-60: #f9a3a3;
+$red-70: #f89393;
+$red-80: #f78484;
+$red-90: #f67474;
+$red-100: #f56565;
+
+$green-10: #e7f9eb;
+$green-20: #cef3d7;
+$green-30: #b6edc2;
+$green-40: #9de8ae;
+$green-50: #85e29a;
+$green-60: #6cdc86;
+$green-70: #54d672;
+$green-80: #3bd05d;
+$green-90: #2ebf4f;
+$green-100: #28a745;
+
+$blue-10: #e6f0fd;
+$blue-20: #cde1fb;
+$blue-30: #b3d1f9;
+$blue-40: #9ac2f7;
+$blue-50: #81b3f5;
+$blue-60: #68a4f3;
+$blue-70: #4e95f0;
+$blue-80: #3585ee;
+$blue-90: #1c76ec;
+$blue-100: #1269db;
+
+$pink-100: #f000b9;
+
+$white: #ffffff;
+$black: rgb(17, 24, 39);
+
+$cubic: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+$form-element-radius: 8px;
+$form-element-height: 46px;
+
+// Text, Title, Headlines
+$secondary-text-color: rgb(107, 114, 128);
+$primary-text-color: $black;
+
+// form elements variables
+$form-input-border-color: $gray-40;
+
+// Search input
+$search-radius: 15px;
+
+// textarea variables
+$textarea-height: 80px;
+
+$fs-1: 12px;
+$fs-2: 13px;
+$fs-3: 14px;
+$fs-4: 15px;
+$fs-5: 17px;
+$fs-6: 19px;
+$fs-7: 22px;
+$fs-8: 28px;
+$fs-9: 38px;
+
+$primary: $purple-100;
+$primary-border-color: $purple-100;
+$primary-hover-bg-color: $purple-100;
+
+$secondary: $gray-50;
+$secondary-border-color: $gray-50;
+$secondary-hover-bg-color: $gray-80;
+
+$secondary-outline-color: $gray-20;
+$secondary-outline-text-color: $gray-80;
+
+$header-height: 60px;
+// $aside-width: 320px;
+$main-nav-panel: 70px;
+
+$z-slide-panel: 21;
+$z-sidebar-container: 21;
+$z-main-sidebar: 20;
+$z-sub-sidebar: 19;

@@ -1,0 +1,60 @@
+@import '../src/shared/styles/variables.scss';
+@import '../shared.module.scss';
+
+.container {
+  border-radius: $form-element-radius;
+  height: $form-element-height;
+  box-sizing: border-box;
+  padding: 0;
+
+  @include box-shadow;
+
+  .baseSelect {
+    height: 100%;
+
+    & ~ .hasValue {
+      top: -8px;
+      font-size: $fs-2;
+    }
+  }
+
+  :global {
+    .select__control {
+      height: 100%;
+      border: 1px solid $form-input-border-color;
+      border-radius: $form-element-radius;
+    }
+
+    .select__single-value {
+      padding: 0 8px;
+    }
+
+    .select__placeholder {
+      display: none;
+    }
+
+    .select__indicator {
+      cursor: pointer;
+    }
+
+    .select__control--is-focused,
+    .select__control--menu-is-open {
+      box-shadow: none !important;
+      border: 2px solid $primary !important;
+    }
+
+    .select__option {
+      cursor: pointer;
+
+      &:hover {
+        color: $white;
+        background-color: $primary !important;
+      }
+    }
+
+    .select__option--is-selected {
+      color: $primary;
+      background-color: $purple-10 !important;
+    }
+  }
+}

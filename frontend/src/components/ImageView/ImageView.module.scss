@@ -1,0 +1,14 @@
+@import 'src/shared/styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 25px;
+}
+
+.img {
+  height: 150px;
+  width: auto;
+  margin-bottom: 30px;
+}

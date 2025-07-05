@@ -1,0 +1,30 @@
+@import 'src/shared/styles/variables.scss';
+
+.container {
+  width: 100%;
+  max-width: 520px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.icon {
+  height: 22px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.actionsContainer {
+  margin: 30px auto;
+}
+
+.link {
+  text-decoration: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: $primary;
+
+  &:hover {
+    color: darken($primary, 12%);
+  }
+}

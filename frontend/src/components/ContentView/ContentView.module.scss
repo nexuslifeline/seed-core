@@ -1,0 +1,8 @@
+@import 'src/shared/styles/variables.scss';
+
+.container {
+  background-color: lighten($gray-10, 3%);
+  width: 100%;
+  min-height: 100%;
+  padding: 30px;
+}

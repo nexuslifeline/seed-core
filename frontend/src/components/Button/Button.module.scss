@@ -1,0 +1,179 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.menu {
+  position: relative;
+  min-width: 160px;
+  text-align: right;
+  display: inline-block;
+}
+
+.icon {
+  // fill: $white;
+  text-align: center;
+  vertical-align: center;
+}
+
+.icon * {
+  height: 14px;
+  width: 14px;
+}
+
+.iconLeft {
+  margin-right: 5px;
+}
+
+.iconRight {
+  margin-left: 5px;
+}
+
+.button {
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 12px;
+  border-radius: $form-element-radius;
+  opacity: 1;
+  height: $form-element-height;
+  margin-bottom: 15px;
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.4;
+  }
+}
+
+.block {
+  width: 100%;
+}
+
+.primary {
+  @include apply-primary-theme;
+
+  :global(.loading__spinner) {
+    &.loader {
+      @include apply-loader-color($white);
+    }
+  }
+}
+
+.secondary {
+  background-color: $secondary;
+  color: $white;
+  border-color: $secondary-border-color;
+
+  :global(.loading__spinner) {
+    &.loader {
+      @include apply-loader-color($white);
+    }
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $secondary-hover-bg-color;
+    border-color: $secondary-hover-bg-color;
+  }
+}
+
+.primaryOutline {
+  background-color: $white;
+  color: $primary;
+  border-color: $primary-border-color;
+
+  :global(.loading__spinner) {
+    &.loader {
+      @include apply-loader-color($primary);
+    }
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $primary-hover-bg-color;
+    color: $white;
+
+    :global(.loading__spinner) {
+      &.loader {
+        @include apply-loader-color($white);
+      }
+    }
+  }
+}
+
+.secondaryOutline {
+  background-color: $white;
+  color: $secondary-outline-text-color;
+  border-color: $secondary-outline-color;
+  // @include box-shadow;
+
+  :global(.loading__spinner) {
+    &.loader {
+      @include apply-loader-color($secondary-outline-text-color);
+    }
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $secondary-hover-bg-color;
+    color: $white;
+    border-color: $secondary-hover-bg-color;
+
+    :global(.loading__spinner) {
+      &.loader {
+        @include apply-loader-color($secondary-outline-text-color);
+      }
+    }
+  }
+}
+
+.menuItems {
+  position: absolute;
+  right: 0;
+  margin-top: 5px;
+  width: 100%;
+  transform-origin: top right;
+  z-index: 30;
+  background-color: white;
+  border: solid 1px lightgray;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.menuItem {
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  padding: 5px 8px;
+  border-radius: $form-element-radius;
+  align-items: center;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.transitionEnter {
+  transition: opacity 0.3s ease-out;
+}
+
+.transitionLeave {
+  transition: opacity 0.2s ease-out;
+}
+
+.enterFrom {
+  opacity: 0;
+}
+
+.enterTo {
+  opacity: 100;
+}
+
+.leaveFrom {
+  opacity: 100;
+}
+
+.leaveTo {
+  opacity: 0;
+}

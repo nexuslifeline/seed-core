@@ -1,0 +1,11 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+@import '../Shared.module.scss';
+
+.login {
+  margin-left: auto;
+}
+
+.actionsContainer {
+  margin-top: 15px;
+}

@@ -1,0 +1,58 @@
+@import 'src/shared/styles/variables.scss';
+
+.header {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 5px 10px;
+  border: none;
+  border-radius: $form-element-radius;
+  height: $form-element-height;
+  background-color: $gray-10;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.panel {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  max-height: 18px;
+  max-width: 18px;
+  position: absolute;
+  right: 10px;
+  fill: $gray-70;
+}
+
+.transitionEnter {
+  transition: all 0.4s ease-out;
+}
+
+.transitionLeave {
+  transition: all 0.3s ease-out;
+}
+
+.enterFrom {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.enterTo {
+  opacity: 100;
+  transform: scale(1);
+}
+
+.leaveFrom {
+  opacity: 100;
+  transform: scale(1);
+}
+
+.leaveTo {
+  opacity: 0;
+  transform: scale(0.95);
+}

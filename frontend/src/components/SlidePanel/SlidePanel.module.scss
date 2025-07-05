@@ -1,0 +1,28 @@
+@import 'src/shared/styles/variables.scss';
+
+$container: 370px;
+
+.container {
+  width: $container;
+  border-left: 1px solid $gray-20;
+  position: fixed;
+  top: 0;
+  right: calc(-1 * #{$container});
+  z-index: $z-slide-panel;
+  background-color: $white;
+  height: 100vh;
+  transition: 0.3s ease right;
+  -moz-transition: 0.3s ease right;
+  -webkit-transition: 0.3s ease right;
+
+  &.open {
+    right: 0;
+  }
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 35px;
+  padding: 5px 10px;
+}

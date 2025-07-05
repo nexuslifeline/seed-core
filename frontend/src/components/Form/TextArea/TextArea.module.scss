@@ -1,0 +1,9 @@
+@import '../src/shared/styles/variables.scss';
+@import '../shared.module.scss';
+
+.input {
+  height: $form-element-height;
+  padding: 15px 20px;
+  height: $textarea-height;
+  font-size: inherit;
+}

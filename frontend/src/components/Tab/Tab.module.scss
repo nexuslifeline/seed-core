@@ -1,0 +1,29 @@
+@import 'src/shared/styles/variables.scss';
+
+.tabList {
+  border-bottom: 1px solid $gray-10;
+}
+
+.listItem {
+  font-size: $fs-4;
+  padding: 6px 10px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  color: $primary-text-color;
+
+  &[aria-selected='true'] {
+    color: $primary;
+    border-bottom: 2px solid $primary;
+  }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.panelItem {
+  padding: 10px;
+  width: 100%;
+}

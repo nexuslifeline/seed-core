@@ -1,0 +1,10 @@
+@import 'src/shared/styles/variables.scss';
+
+.link {
+  text-decoration: none;
+  height: auto;
+  color: $primary-text-color;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}

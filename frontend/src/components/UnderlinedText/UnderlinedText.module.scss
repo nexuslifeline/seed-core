@@ -1,0 +1,18 @@
+@import 'src/shared/styles/variables.scss';
+
+.underlinedText {
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    height: 7px;
+    width: 105%;
+    border-top: 3px solid $primary;
+    border-radius: 50%;
+    transform: rotate(-5deg);
+  }
+}

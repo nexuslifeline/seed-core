@@ -1,0 +1,29 @@
+@import 'src/shared/styles/variables.scss';
+
+.container {
+  width: 325px;
+}
+
+.header {
+  padding: 10px 15px;
+  background-color: $gray-10;
+}
+
+.tabList {
+  padding: 0 15px;
+}
+
+.listItemClass {
+  font-size: $fs-2 !important;
+  color: $primary-text-color !important;
+}
+
+.panels {
+  height: 300px;
+}
+
+.panelItemClass {
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+}

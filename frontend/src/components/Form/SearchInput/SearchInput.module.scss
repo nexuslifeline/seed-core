@@ -1,0 +1,76 @@
+@import '../src/shared/styles/variables.scss';
+@import '../shared.module.scss';
+
+.searchContainer {
+  position: relative;
+  width: 100%;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+}
+
+.input {
+  padding-left: 40px;
+  background-color: $gray-10;
+  border: 0;
+  border-radius: $search-radius;
+  width: 70%;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    opacity: 0;
+  }
+
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    opacity: 0;
+  }
+
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    opacity: 0;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    opacity: 0;
+  }
+
+  &:focus {
+    width: 100%;
+  }
+
+  &:not(:focus)::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: inherit;
+    opacity: 1;
+  }
+
+  &:not(:focus):-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: inherit;
+    opacity: 1;
+  }
+
+  &:not(:focus)::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: inherit;
+    opacity: 1;
+  }
+
+  &:not(:focus):-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: inherit;
+    opacity: 1;
+  }
+}

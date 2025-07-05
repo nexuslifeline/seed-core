@@ -1,0 +1,47 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.loading__spinner {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: 1s rotate linear infinite;
+
+  &:before,
+  &:after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 5px solid transparent;
+    border-bottom-color: $gray-70;
+    transform: translate(-7px, 5px) rotate(-40deg);
+  }
+
+  &:after {
+    border-color: $gray-70 transparent transparent transparent;
+    transform: translate(11px, 0px) rotate(-40deg);
+  }
+
+  &.primary {
+    @include apply-loader-color($primary);
+  }
+
+  &.white {
+    @include apply-loader-color($white);
+  }
+
+  &.dark {
+    @include apply-loader-color($gray-70);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

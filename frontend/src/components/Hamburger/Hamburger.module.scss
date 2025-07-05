@@ -1,0 +1,36 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.hamburger {
+  cursor: pointer;
+
+  .line {
+    width: 22px;
+    height: 2px;
+    background-color: $primary;
+    display: block;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.isActive .line:nth-child(1),
+.isActive .line:nth-child(3) {
+  width: 13px;
+}
+
+.isActive .line:nth-child(1) {
+  -webkit-transform: translateX(-7px) translateY(3px) rotate(-45deg);
+  -ms-transform: translateX(-7px) translateY(3px) rotate(-45deg);
+  -o-transform: translateX(-7px) translateY(3px) rotate(-45deg);
+  transform: translateX(-7px) translateY(3px) rotate(-45deg);
+}
+
+.isActive .line:nth-child(3) {
+  -webkit-transform: translateX(-7px) translateY(-3px) rotate(45deg);
+  -ms-transform: translateX(-7px) translateY(-3px) rotate(45deg);
+  -o-transform: translateX(-7px) translateY(-3px) rotate(45deg);
+  transform: translateX(-7px) translateY(-3px) rotate(45deg);
+}

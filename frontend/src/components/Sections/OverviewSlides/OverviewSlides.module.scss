@@ -1,0 +1,54 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.slide {
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+  margin: 40px auto 50px 40px;
+}
+
+.title,
+.description {
+  color: $white;
+  opacity: 0.9;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.title {
+  font-size: $fs-9;
+}
+
+.description {
+  font-size: $fs-5;
+}
+
+.navButtons {
+  display: none;
+}
+
+.dotsContainer {
+  display: inline-flex;
+  list-style: none;
+}
+
+.dotItem {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: darken($primary, 10%);
+  margin-right: 3px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    width: 30px;
+    border-radius: 10px;
+  }
+}

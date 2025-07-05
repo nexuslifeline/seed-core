@@ -1,0 +1,31 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.container {
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+
+.primary {
+  @include apply-primary-theme;
+}
+
+.secondary {
+  background-color: $secondary;
+  color: $white;
+  border-color: $secondary-border-color;
+}
+
+.primaryOutline {
+  background-color: $white;
+  color: $primary;
+  border: solid 1px $primary-border-color;
+}
+
+.secondaryOutline {
+  background-color: $white;
+  color: $secondary-outline-text-color;
+  border-color: $secondary-outline-color;
+  border: solid 1px $secondary-outline-color;
+}

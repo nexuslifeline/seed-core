@@ -1,0 +1,8 @@
+@import 'src/shared/styles/variables.scss';
+
+.error {
+  width: 100%;
+  font-size: $fs-3;
+  color: $red-100;
+  padding: 5px 0;
+}

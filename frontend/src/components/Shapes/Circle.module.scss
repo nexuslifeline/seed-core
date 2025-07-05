@@ -1,0 +1,44 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.circle {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+1,ffffff+49,ffffff+95,ffffff+95&0+10,0.3+100 */
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(255, 255, 255, 0) 1%,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0.13) 49%,
+    rgba(255, 255, 255, 0.28) 95%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(255, 255, 255, 0) 1%,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0.13) 49%,
+    rgba(255, 255, 255, 0.28) 95%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0) 1%,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0.13) 49%,
+    rgba(255, 255, 255, 0.28) 95%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#4dffffff', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  z-index: 10;
+}

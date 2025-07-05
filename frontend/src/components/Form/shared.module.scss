@@ -1,0 +1,107 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.label {
+  font-size: $fs-3;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  color: $primary-text-color;
+  left: 15px;
+  top: 14px;
+  padding: 0 5px;
+  background: $white;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+input.input {
+  &:not([type='submit']),
+  &:not([type='radio']),
+  &:not([type='checkbox']) {
+    height: $form-element-height;
+  }
+}
+
+.input {
+  // font-size: $fs-3;
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  background: $white;
+  border: 1px solid $form-input-border-color;
+  border-radius: $form-element-radius;
+  box-sizing: border-box;
+  color: $primary-text-color;
+
+  // @include box-shadow;
+
+  &:focus {
+    outline: 1px solid $primary;
+    border: 1px solid $primary;
+  }
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    ~ .label {
+      top: -8px;
+      font-size: $fs-2;
+    }
+  }
+
+  &:not(:focus)::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: transparent;
+  }
+
+  &:not(:focus):-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: transparent;
+  }
+
+  &:not(:focus)::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: transparent;
+  }
+
+  &:not(:focus):-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: transparent;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+
+  .inputGroup {
+    flex-basis: 50%;
+    margin-left: 10px;
+  }
+
+  .inputContainer {
+    flex: 50%;
+  }
+
+  .inputContainer ~ .inputContainer {
+    margin-left: 10px;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+
+  &.noMargin {
+    margin-bottom: 0;
+  }
+}

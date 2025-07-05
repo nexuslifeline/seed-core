@@ -1,0 +1,60 @@
+@import 'src/shared/styles/variables.scss';
+
+.container {
+  min-height: 60px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+  border: solid 1px $gray-20;
+}
+
+.innerContainer {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 10px;
+  flex: 1;
+
+  &:hover {
+    background-color: $gray-10;
+  }
+}
+
+.fileName {
+  font-weight: 600;
+  font-size: $fs-3;
+}
+
+.fileType {
+  font-size: $fs-1;
+}
+
+.icon {
+  min-height: 28px;
+  min-width: 28px;
+  max-height: 28px;
+  max-width: 28px;
+  margin-right: 15px;
+  fill: gray;
+}
+
+.actionContainer {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  justify-content: center;
+  width: 48px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $red-40;
+  }
+}
+
+.removeIcon {
+  width: 36px;
+  height: 36px;
+  fill: $red-90;
+}

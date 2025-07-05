@@ -1,0 +1,61 @@
+@import 'src/shared/styles/variables.scss';
+
+.container {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.bordered,
+.bordered tr,
+.bordered th,
+.bordered td {
+  border: solid 1px $gray-30;
+}
+
+.borderless,
+.borderless tr,
+.borderless th,
+.borderless td {
+  border: none;
+}
+
+.striped tr:nth-child(even) > td,
+.striped th {
+  background-color: $gray-10;
+}
+
+tr {
+  border-bottom: 1px solid $gray-30;
+  border-top: 1px solid $gray-30;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  text-align: left;
+}
+
+th {
+  color: $primary-text-color;
+}
+
+td {
+  color: $secondary-text-color;
+}
+
+.filterContainer {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterInput {
+  width: 250px;
+}
+
+.newCustomer {
+  margin: 10px;
+  width: 30%;
+  font-size: 12px;
+}

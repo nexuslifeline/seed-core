@@ -1,0 +1,36 @@
+@import 'src/shared/styles/variables.scss';
+@import 'src/shared/styles/mixins.scss';
+
+.container {
+  position: relative;
+  width: 240px;
+  height: 100%;
+  background-color: $white;
+  border-right: 1px solid $gray-20;
+  transition: 0.4s ease width;
+  -moz-transition: 0.4s ease width;
+  -webkit-transition: 0.4s ease width;
+  z-index: $z-sub-sidebar;
+
+  &.collapse {
+    width: 0;
+    overflow: hidden;
+    margin-left: -1px;
+  }
+
+  // @include for-size(tablet-portrait-down) {
+  //   z-index: 100;
+  // }
+}
+
+.logo {
+  height: 26px;
+  width: auto;
+  margin: auto;
+}
+
+.logoContainer {
+  display: flex;
+  width: 100%;
+  padding: 20px 10px;
+}

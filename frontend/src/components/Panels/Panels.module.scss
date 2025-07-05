@@ -1,0 +1,12 @@
+@import 'src/shared/styles/variables.scss';
+
+.container {
+  flex: 1;
+  position: relative;
+  padding: 30px 40px;
+
+  &.hasBackground {
+    background-color: $primary;
+    overflow: hidden;
+  }
+}
